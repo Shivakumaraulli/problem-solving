@@ -1,0 +1,78 @@
+JavaScript
+Js-Handson-6..
+Problem Solving..
+1.Find the Smaller Angle.
+PrepBuddy has an analog clock which consists of two hands one for hour and another for minute. She wants to calculate the shorter angle formed between hour and minute hand at any given time.
+
+var Minimal_Angle = (h, m) => 
+        {
+          let hAngle=((h*360)/12+(m*360)/(12*60));
+          let mAngle=((m*360)/60);
+          let angle=Math.abs(hAngle-mAngle);
+          if(angle>180){
+            angle=360-angle;
+          }
+          return angle;
+        };
+         
+            
+
+2.Check whether the year is Leap year or not.
+Write a program which takes an year N as input from the user and find out whether the given year is a Leap Year or not.
+
+var Check_Leap = (year) => 
+        {
+         if(year%4===0 && year%100!==0||(year%400===0)){
+           return "Leap Year"
+         }
+          return "Non Leap Year"
+        };
+         
+        
+
+3.Perfect Number Check.
+Have you heard of Perfect numbers? If not let me tell you what is it, Perfect Numbers are integers that are equal to the sum of all its divisors except that number itself. Now, You are given an integer N , write a program to check whether the given number is a Perfect Number or not.
+
+var Perfect_Check = (N) => 
+        {
+          let sum=0;
+          for(let i=1;i <= N;i++){
+            if(N%i===0){
+              sum=sum+i
+            }
+          }
+          if(N===sum){
+           return "YES"
+          }
+          else{
+            return "NO"
+          }
+        };
+         
+
+4.Reverse a Number.
+Write a program which takes a numebr N as input from the user and You need to reverse the number.
+
+var Reverse_Number = (N) => 
+        {
+         rev=0;
+         while(N>0){
+           r=N%10;
+           rev=rev*10+r;
+           N=parseInt(N/10)
+         }
+         return rev
+        };
+         
+
+5.Substring Check.
+You are given two strings S 1 and S 2 , you need to check whether the string S1 is a substring of string S2 or not.
+
+var Substring_Check = (S1, S2) => 
+        {
+        if(S1.includes(S2)){
+          return "YES";
+          }
+          return "NO"
+        };
+         
